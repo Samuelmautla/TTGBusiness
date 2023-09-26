@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     <meta name-="viewport" content="width=device-width, initial-sacale=1.0">
+     <title>Contact form</title>
+     <link rel="stylesheet" href="form.css">
+
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+
+    </head>
+    <body>
+        <div class="container">
+           <form>
+            <h3>Get In Touch with Us now</h3>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="name" placeholder="Email id" required>
+            <input type="text" id="phone" placeholder="Phone no." required>
+            <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
+            <button type="submit">Send</button>
+           </form >
+        </div>
+
+        <script type="text/javascript">
+            (function() {
+                // https://dashboard.emailjs.com/admin/account
+                emailjs.init('8PAPpPJqzurcd3RIc');
+            })();
+        </script>
+        <script type="text/javascript">
+            window.onload = function() {
+                document.getElementById('contact-form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    // generate a five digit number for the contact_number variable
+                    this.contact_number.value = Math.random() * 100000 | 0;
+                    // these IDs from the previous steps
+                    emailjs.sendForm('contact_service', 'contact_form', this)
+                        .then(function() {
+                            console.log('SUCCESS!');
+                        }, function(error) {
+                            console.log('FAILED...', error);
+                        });
+                });
+            }
+        </script>
+
+<!-- Make sure you have included the Email.js library in your HTML -->
+
+
+<!--<script>
+    function sendEmail() {                                                  
+        Email.send({
+            SecureToken: "6k6lOa8ihVn8AfpN8XX1o",
+            To: "thetechgiants1@gmail.com",
+            From: "thetechgiants1@gmail.com", // Replace this with your Email.js registered email
+            Subject: "New Contact Form Enquiry",
+            Body:
+                "Name: " +
+                document.getElementById("name").value +
+                "<br> Email: " +
+                document.getElementById("email").value +
+                "<br> Phone no: " +
+                document.getElementById("phone").value +
+                "<br> Message: " +
+                document.getElementById("message").value,
+        }).then(
+            (message) => alert("Message Sent Successfully")
+        );
+    }
+</script>
+
+
+
+       <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+            function sendEmail() {
+                Email.send({
+                    secureToken: "6k6lOa8ihVn8AfpN8XX1o",
+                    
+                    To: 'thetechgiants1@gmail.com',
+                    From: document.getElementById("email").value, // Corrected the method name to getElementById
+                    Subject: "New Contact Form Enquiry",
+                    Body: "Name: " + document.getElementById("name").value 
+                        + "<br> Email: " + document.getElementById("email").value 
+                        + "<br> Phone no: " + document.getElementById("phone").value 
+                        + "<br> Message: " + document.getElementById("message").value
+                }).then(
+                    message => alert("Message Sent Successfully")
+                );
+            }
+        </script>
+        
+    </body>
+</html> --> 
+<!--Password D20601BE6DB1C9DD2D14E5902D1FFF08BD85
+service_drpn7bl
+secureToken:"b18aaa1f-a8a1-482e-9570-7062ce62c6e4",
+-->                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
